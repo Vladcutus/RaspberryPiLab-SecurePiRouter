@@ -64,13 +64,13 @@ The Pi will have, by default, an IP Address of 192.168.1.1. To be able to access
 <br />
 Here I'm going to click "Properties", select IPv4(TCP/IPv4) and open its Properties. <br/><br>
 <p align="center">
-<img src="https://i.imgur.com/ThhSHkx.png" height="50%" width="50%" /><img src="https://i.imgur.com/6AM0Edb.png" height="50%" width="50%" />
+<img src="https://i.imgur.com/ThhSHkx.png" height="40%" width="40%" /><img src="https://i.imgur.com/6AM0Edb.png" height="40%" width="40%" />
 </p>
 <br />
 <br />
-To ensure connectivity we will try to ping Server from the Client. At first the ping will not work correctly. We need to create a new firewall rule on Labserver-DC to allow ICMPv4 traffic, both inbound and outbound, and then repeat the same for the Client VM. Now we can ping Labserver-DC successfully from Labuser. <br/><br>
+I'm switching from automatic to manual and I'm typing the IP address I previously designated for this adapter, the subnet mask and the default gateway which is the PI's IP Address. OK>OK>Close.<br/><br>
 <p align="center">
-<img src="https://imgur.com/t5loLK2.png" height="80%" width="80%" /><img src="https://imgur.com/RkefCsw.png" height="80%" width="80%" /><img src="https://imgur.com/lLF6vrL.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/ZjiJgph.png" height="40%" width="40%" />
 </p>
 <br />
 <br />
