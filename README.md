@@ -27,29 +27,35 @@ Project consists in: <br>
 I'm going to initialise this project by connecting the Raspberry Pi to my PC through an RJ-45 Ethernet cable.
  <br/> 
 <p align="center">
-<img src="https://imgur.com/1rsHriM" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/1rsHriM.jpeg" height="50%" width="50%"/><img src="https://i.imgur.com/EqfRjAd.jpeg" height="50%" width="50%"/>
 </p>
  <br />
 <br />
-We then created our virtual machines: Labserver running Windows Server 2022, and Labuser running Windows 10, each auto-configured with their respective public and private IP addresses. :  <br/> <br>
+Next, I prepare the microSD card by inserting it into my PC.
+<br/> <br>
 <p align="center">
-<img src="https://imgur.com/g73k5Io.png" height="80%" width="80%" /><img src="https://imgur.com/1v2bNZP.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/l8Vht60.jpeg" height="50%" width="50%" />
 </p>
 <br />
 <br />
-Next, we'll configure the server's private IP address to use a static assignment instead of a dynamic one. <br/> <br>
+I navigate to the official OpenWrt website, locate and download the appropriate firmware (OpenWRT image) compatible with my specific Raspberry Pi model. https://firmware-selector.openwrt.org/?version=24.10.5 Factory EXT 4 is the one we need.
+<br/> <br>
 <p align="center">
-<img src="https://imgur.com/Xz2d4oW.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/55JV5p7.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
-We’ll do this by creating a new network interface (NIC) for the Labserver machine. We'll select the intended subnet, set the IP assignment to 'Static', and assign the address 192.168.0.5.<br/><br>
+Now I'm ready to flash the firmware onto the microSD card using a tool such as DaemonTools (Raspberry Pi Imager or balenaEtcher), ready for insertion into the Raspberry Pi.
+<p>
+I launch the flashing tool, select "Write to USB drive," choose the downloaded OpenWrt image file, verify that the target device is my microSD card, initiate the write process by clicking Start, and clicking "Close" once the flashing operation completes successfully.
+<p/>
 <p align="center">
-<img src="https://imgur.com/hKZi2DZ.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/WDJb7cf.png" height="48%" width="48%" /><img src="https://i.imgur.com/e3h5Naf.png" height="52%" width="52%" /><img src="https://i.imgur.com/Ma5nO90.png" height="60%" width="60%" /><img src="https://i.imgur.com/7Sc0C7u.png" height="40%" width="40%" />
 </p>
 <br />
 <br />
-After creating it, we'll edit the IP configuration of our new NIC to associate a public IP address provided by Azure.  <br/><br>
+Next I insert the prepared microSD card into the Raspberry Pi and power it on to initiate the boot process with the flashed OpenWrt firmware.
+The Pi will have, by default, an IP Address of 192.168.1.1. To be able to access it I'm going to give my PC's ethernet port an IP address of 192.168.1.12   <br/><br>
 <p align="center">
 <img src="https://imgur.com/CwqSzsx.png" height="80%" width="80%" />
 <p/>
