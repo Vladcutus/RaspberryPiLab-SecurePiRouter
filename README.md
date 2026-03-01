@@ -2,7 +2,7 @@
 In this project I'm turning a Raspberry Pi 5 into a secure wireless network router
 
 <p align="center">
-<img src="https://images2.imgbox.com/49/c6/2eoozQu9_o.png" height="50%" width="50%"/>
+<img src="https://images2.imgbox.com/49/c6/2eoozQu9_o.png" height="80%" width="80%"/>
 
 <h2>Description</h2>
 
@@ -70,7 +70,7 @@ Here I'm going to click "Properties", select IPv4(TCP/IPv4) and open its Propert
 <br />
 I'm switching from automatic to manual and I'm typing the IP address I previously designated for this adapter, the subnet mask and the default gateway which is the PI's IP Address. OK>OK>Close.<br/><br>
 <p align="center">
-<img src="https://i.imgur.com/ZjiJgph.png" height="40%" width="40%" />
+<img src="https://i.imgur.com/ZjiJgph.png" height="50%" width="50%" />
 </p>
 <br />
 <br />
