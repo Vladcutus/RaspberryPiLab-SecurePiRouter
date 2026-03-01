@@ -55,15 +55,16 @@ I launch the flashing tool, select "Write to USB drive," choose the downloaded O
 <br />
 <br />
 Next I insert the prepared microSD card into the Raspberry Pi and power it on to initiate the boot process with the flashed OpenWrt firmware.
-The Pi will have, by default, an IP Address of 192.168.1.1. To be able to access it I'm going to give my PC's ethernet port an IP address of 192.168.1.12   <br/><br>
+The Pi will have, by default, an IP Address of 192.168.1.1. To be able to access it I'm going to give my PC's ethernet port an IP address of 192.168.1.12.
+<p>To do this I'm opening Control Panel, select "View network status and tasks", find my Ethernet port (Network 20 in my case) and select "Local Area Network".</p>
 <p align="center">
-<img src="https://imgur.com/CwqSzsx.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/F6tLLxk.png" height="80%" width="80%" />
 <p/>
 <br />
 <br />
-Next, we’ll access each VM and run ipconfig to verify their network configurations. <br/><br>
+Here I'm going to click "Properties", select IPv4(TCP/IPv4) and open its Properties. <br/><br>
 <p align="center">
-<img src="https://imgur.com/8ceD2Oq.png" height="80%" width="80%" /><img src="https://imgur.com/XZ8GLlW.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/ThhSHkx.png" height="50%" width="50%" /><img src="https://i.imgur.com/6AM0Edb.png" height="50%" width="50%" />
 </p>
 <br />
 <br />
