@@ -24,10 +24,10 @@ Project consists in: <br>
 <h2>Deployment and configuring walk-through:</h2>
 
 
-First we are starting with the creation of our network named Labnetwork with an address range of 192.168.0.0/23 which will give our network a total of 512 addresses. We will split our network in 2 subnets. The first range 192.168.0.0/24 will be dedicated to the servers and the other one 192.168.1.0/24 to the hosts.<br/>
+I'm going to initialise this project by connecting the Raspberry Pi to my PC through an RJ-45 Ethernet cable.
  <br/> 
 <p align="center">
-<img src="https://imgur.com/nFREDwV.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/1rsHriM" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
  <br />
 <br />
