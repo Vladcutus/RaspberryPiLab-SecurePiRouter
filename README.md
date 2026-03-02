@@ -74,7 +74,7 @@ I'm switching from automatic to manual and I'm typing the IP address I previousl
 </p>
 <br />
 <br />
-Now I'm ready to start configure the router, so I open PowerShell (CMD will work just fine too) on my PC and establish an SSH connection to the Raspberry Pi by running the command ssh root@192.168.1.1, accepting the host key fingerprint if prompted for the first time.
+Now I'm ready to start configure the router, so I open PowerShell (CMD will work just as fine) on my PC and establish an SSH connection to the Raspberry Pi by running the command ssh root@192.168.1.1, accepting the host key fingerprint if prompted for the first time.
  <br/><br>
 <p align="center">
 <img src="https://i.imgur.com/1IN6lQf.png" height="80%" width="80%" />
