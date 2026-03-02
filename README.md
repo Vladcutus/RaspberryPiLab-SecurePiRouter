@@ -74,33 +74,31 @@ I'm switching from automatic to manual and I'm typing the IP address I previousl
 </p>
 <br />
 <br />
-Next, we'll configure the IP settings on the Server machine and set the DNS server to point to itself. And we will also change the DNS on our VNET in Azure. <br/><br>
+Now I'm ready to start configure the router, so I open PowerShell (CMD will work just fine too) on my PC and establish an SSH connection to the Raspberry Pi by running the command ssh root@192.168.1.1, accepting the host key fingerprint if prompted for the first time.
+ <br/><br>
 <p align="center">
-<img src="https://imgur.com/bz6NnBn.png" height="40%" width="40%" /> <br> <img src="https://imgur.com/iNnAHp7.png" height="40%" width="40%" />
+<img src="https://i.imgur.com/1IN6lQf.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+I follow up by securely set a new root password for the OpenWrt system by running the passwd command, entering a strong password twice as prompted, which replaces the default insecure credentials and enhances initial access protection.
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/SnRbPUe.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+I navigate to the configuration directory by running cd /etc/config in the SSH session, then use the ls command to list and display the contents, revealing the standard OpenWrt configuration files such as network, dhcp, firewall, wireless, and system that control the device's core settings and services.
+<br>
+<p align="center">
+<img src="https://i.imgur.com/Vb8esvE.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
 
-
-At this stage, we’ll go on the Server machine, open an elevated PowerShell and we will use the command **Install-WindowsFeature AD-Domain-Services -IncludeManagementTools** to install Active Directory Domain Services. And then we will use **Install-ADDSForest -DomainName Labdomain.loc -InstallDNS** to set up a new forest. As you see we named our domain **Labdomain.loc". Once these steps are completed, we will reboot the system and log back in. Afterward, we can run the **Get-ADDomain** command to verify that our new domain has been successfully created. Additionally, we can confirm its presence in Active Directory Users and Computers.<br/><br>
-<p align="center">
-<img src="https://imgur.com/FYyEF6R.png" height="80%" width="80%" /><img src="https://imgur.com/3MLi6Yb.png" height="80%" width="80%" /><img src="https://imgur.com/IE21nLp.png" height="80%" width="80%" /><img src="https://imgur.com/RqAkBxL.png" height="80%" width="80%" /><img src="https://imgur.com/Dmo7KvE.png" height="80%" width="80%" />
-</p>
-
-
-<br />
-<br />
- 
-Before we move to the client machine we will create a new user named Jimmy. <br/><br>
-<p align="center">
-<img src="https://imgur.com/bLbF68X.png" height="80%" width="80%" /><img src="https://imgur.com/76eDBgZ.png" height="40%" width="40%" />
-</p>
-<br />
-<br />
-
-Now, returning to the client machine, we will configure its IPv4 settings. This machine will continue to receive its private IP via DHCP, but we have to change its DNS server IP address to point to the right DNS server in order to find the domain (192.168.0.5). To confirm everything is working, we’ll ping Labdomain.loc, and it should respond with the Domain Controller's IP address like in the image below. <br/><br>
+I'm going to back up some files using the cp command followed by the file I want to backup and then the name of the file that I want my backup to be named after. Checking my backup work with ls thereafter.<br/>
 <p align="center"> 
-<img src="https://imgur.com/4NXP4bp.png" height="40%" width="40%" /><img src="https://imgur.com/KDewTdv.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/lA5BmTr.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
