@@ -2,7 +2,7 @@
 
 
 <p align="center">
-<img src="https://images2.imgbox.com/49/c6/2eoozQu9_o.png" height="80%" width="80%"/>
+<img src="https://images2.imgbox.com/49/c6/2eoozQu9_o.png" height="90%" width="90%"/>
 
 <h2>Description</h2>
 
@@ -27,7 +27,7 @@ Project consists in: <br>
 I'm going to initialise this project by connecting the Raspberry Pi to my PC through an RJ-45 Ethernet cable.
  <br/> 
 <p align="center">
-<img src="https://i.imgur.com/1rsHriM.jpeg" height="60%" width="60%"/><img src="https://i.imgur.com/EqfRjAd.jpeg" height="60%" width="60%"/>
+<img src="https://i.imgur.com/1rsHriM.jpeg" height="50%" width="50%"/><img src="https://i.imgur.com/EqfRjAd.jpeg" height="50%" width="50%"/>
 </p>
  <br />
 <br />
