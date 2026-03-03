@@ -2,7 +2,7 @@
 
 
 <p align="center">
-<img src="https://images2.imgbox.com/49/c6/2eoozQu9_o.png" height="90%" width="90%"/>
+<img src="https://images2.imgbox.com/49/c6/2eoozQu9_o.png" height="80%" width="80%"/>
 
 <h2>Description</h2>
 
