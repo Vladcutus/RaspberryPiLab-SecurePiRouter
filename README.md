@@ -1,5 +1,5 @@
 # Raspberry Pi Lab - Secure Pi Router
-In this project I'm turning a Raspberry Pi 5 into a secure wireless network router
+
 
 <p align="center">
 <img src="https://images2.imgbox.com/49/c6/2eoozQu9_o.png" height="80%" width="80%"/>
