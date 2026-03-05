@@ -115,7 +115,7 @@ I enter insert mode in vi by pressing the i key, then modify the LAN interface s
 </p>
 <br />
 <br />
-I proceed to edit the firewall configuration file by launching vi on /etc/config/firewall and, within the WAN zone section, change the option input 'reject' directive to option input 'accept' to permit incoming traffic on the WAN interface for better accessibility during the initial setup. I'm using the same combo to exit and save i.e. ESC :wq Enter, after which I'm going to reboot the Pi by writing reboot and hit Enter.
+I proceed to edit the firewall configuration file by launching vi on /etc/config/firewall and, within the WAN zone section, change the option input 'reject' directive to option input 'accept' to permit incoming traffic on the WAN interface for better accessibility during the initial setup. I'm using the same combo to save and exit i.e. ESC :wq Enter, after which I'm going to reboot the Pi by writing reboot and hit Enter.
 <br/><br>
 <p align="center">
 <img src="https://i.imgur.com/SbUVl8I.png" height="50%" width="50%" /><img src="https://i.imgur.com/qvLm7B6.png" height="50%" width="50%" />
