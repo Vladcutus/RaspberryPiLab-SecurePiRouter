@@ -119,12 +119,44 @@ I enter insert mode in vi by pressing the i key, then modify the LAN interface s
 <br />
 <br />
 
+
+I proceed to edit the firewall configuration file by launching vi on /etc/config/firewall and, within the WAN zone section, change the option input 'reject' directive to option input 'accept' to permit incoming traffic on the WAN interface for better accessibility during the initial setup. I'm using the same combo to exit and save i.e. ESC :wq Enter, after which I'm going to reboot the Pi by writing reboot and hit Enter.
 <br/><br>
 <p align="center">
-<!-- <img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+<img src="https://i.imgur.com/SbUVl8I.png" height="50%" width="50%" /><img src="https://i.imgur.com/qvLm7B6.png" height="50%" width="50%" />
 </p>
 <br />
-<br />  --!>
+<br />
+
+We note that the updated LAN IP address (now 10.155.155.60) and the newly added WWAN interface with DHCP support will alter future connection methods—requiring me to switch my Windows Ethernet adapter back to automatic (DHCP) settings for seamless access via the Pi's dynamic upstream link.
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/eqm15M3.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
+I verify the updated network configuration on my Windows PC by running the ipconfig command, confirming that DHCP from the Raspberry Pi has assigned it the IP address 10.155.155.170 within the new subnet, then establish a fresh SSH connection to the Pi by running ssh root@10.155.155.60 using the updated gateway address.
+<br/><br>
+<p align="center">
+<img src="https://imgur.com/K3f65Zk.png" height="50%" width="50%" /><img src="https://i.imgur.com/TEohuEo.png" height="50%" width="50%" />
+</p>
+<br />
+<br />
+<!--
+<br/><br>
+<p align="center">
+<img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+<br/><br>
+<p align="center">
+<img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
 
 **TO BE CONTINUED**
  <!--
