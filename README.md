@@ -95,14 +95,12 @@ I navigate to the configuration directory by running cd /etc/config in the SSH s
 </p>
 <br />
 <br />
-
 I'm going to back up some files using the cp command followed by the file I want to backup and then the name of the file that I want my backup to be named after. Checking my backup work with ls thereafter.<br/>
 <p align="center"> 
 <img src="https://i.imgur.com/lA5BmTr.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
-
 I proceed to edit the network configuration file by navigating to /etc/config and launching vi on the network file with the command vi network, preparing to modify the LAN interface settings for customized IP addressing and connectivity.
 <br/> <br>
 <p align="center">
@@ -110,7 +108,6 @@ I proceed to edit the network configuration file by navigating to /etc/config an
 </p>
 <br />
 <br />
-
 I enter insert mode in vi by pressing the i key, then modify the LAN interface section for enhanced security by changing the IP address to 10.155.155.60, add the line option force_link '1' to ensure the interface remains active even without a physical link, subsequently append a new WWAN interface configuration with config interface 'wwan', option proto 'dhcp', option peerdns '0', and option dns '1.1.1.1 9.9.9.9' to enable upstream Internet access via DHCP with custom DNS servers, and finally add a VPN client interface stub using config interface 'vpnclient', option ifname 'tun0', and option proto 'none' to prepare for future tunneled routing.
 <p>To save and exit vi I'm goinng to press ESC followed by writing :wq  and hit Enter</p> <br>
 <p align="center">
@@ -118,8 +115,6 @@ I enter insert mode in vi by pressing the i key, then modify the LAN interface s
 </p>
 <br />
 <br />
-
-
 I proceed to edit the firewall configuration file by launching vi on /etc/config/firewall and, within the WAN zone section, change the option input 'reject' directive to option input 'accept' to permit incoming traffic on the WAN interface for better accessibility during the initial setup. I'm using the same combo to exit and save i.e. ESC :wq Enter, after which I'm going to reboot the Pi by writing reboot and hit Enter.
 <br/><br>
 <p align="center">
@@ -127,7 +122,6 @@ I proceed to edit the firewall configuration file by launching vi on /etc/config
 </p>
 <br />
 <br />
-
 We note that the updated LAN IP address (now 10.155.155.60) and the newly added WWAN interface with DHCP support will alter future connection methods—requiring me to switch my Windows Ethernet adapter back to automatic (DHCP) settings for seamless access via the Pi's dynamic upstream link.
 <br/><br>
 <p align="center">
@@ -135,7 +129,6 @@ We note that the updated LAN IP address (now 10.155.155.60) and the newly added 
 </p>
 <br />
 <br />
-
 I verify the updated network configuration on my Windows PC by running the ipconfig command, confirming that DHCP from the Raspberry Pi has assigned it the IP address 10.155.155.170 within the new subnet, then establish a fresh SSH connection to the Pi by running ssh root@10.155.155.60 using the updated gateway address.
 <br/><br>
 <p align="center">
@@ -156,7 +149,7 @@ I verify the updated network configuration on my Windows PC by running the ipcon
 </p>
 <br />
 <br />
-
+--!>
 
 **TO BE CONTINUED**
  <!--
