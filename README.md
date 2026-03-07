@@ -185,30 +185,112 @@ For the second WI-FI interface I will use the NETGEAR Nighthawk WiFi 6 USB 3.0 A
 </p>
 <br />
 <br />
+
+I continue by installing the required packages by running the command: 'opkg update' then 'opkg install kmod-mt7921u usbutils openvpn-openssl luci-app-openvpn nano' which pulls in the in-kernel driver for the MT7921AU WiFi 6 adapter, USB utilities, OpenVPN with OpenSSL support, the LuCI web interface for OpenVPN, and the nano text editor for easier configuration.
 <br/><br>
 <p align="center">
-<img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+<img src="https://i.imgur.com/JJCZy0f.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
+
+Checking what is going on at the USB side with the command 'lsusb -t' and confirm that the MT7921AU WiFi 6 adapter has been successfully recognized and bound to the kmod-mt7921u driver, showing the expected driver attachment under the USB bus.
 <br/><br>
 <p align="center">
-<img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+<img src="https://i.imgur.com/amJ9hmf.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
+Here I ran into an error when I tried to bring it up and running, namely "SIOCGIFFLAGS: No such device". I checked with 'ifconfig' and it wasn't there. After a short research using AI, I realised that a new interface had to be created manually. So I typed 'iw phy phy1 interface add wlan1 type managed' and I checked with 'ip link show wlan1'.
+Afterwards I typed 'ip link set wlan1 up' to make it alive and after I checked again I could see the word 'UP' in the details.
 <br/><br>
 <p align="center">
-<img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+<img src="https://i.imgur.com/rTmuvjU.png" height="80%" width="80%" /><img src="https://i.imgur.com/HYZOKeS.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
+And if I checked 'ifconfig' once again, I could see the new interface appearing there
 <br/><br>
 <p align="center">
-<img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
+
+I also found this cat command on the internet to make my work survive reboot:
+cat > /etc/rc.local << 'EOF'
+#!/bin/sh
+modprobe mt7921u
+sleep 2
+echo '0846 9065' > /sys/bus/usb/drivers/mt7921u/new_id
+sleep 3
+iw phy phy1 interface add wlan1 type managed
+ip link set wlan1 up
+exit 0
+EOF
+<p>After that I ran 'chmod +x /etc/rc.local' to make the file executable. And then rebooted.</p>
+<p align="center">
+<img src="https://i.imgur.com/eCOVeLs.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
 --!>
 
 **TO BE CONTINUED**
