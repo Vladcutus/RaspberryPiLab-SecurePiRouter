@@ -19,7 +19,7 @@ Project consists in: <br>
 - <b>OpenWRT</b>
 - <b>PowerShell</b> 
 - <b>Windows 11</b>
-- <b>usb adapter</b>
+- <b>NETGEAR WiFi Adapter (A7500)</b>
 
 <h2>Deployment and configuring walk-through:</h2>
 
