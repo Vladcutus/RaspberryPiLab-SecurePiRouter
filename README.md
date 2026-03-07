@@ -179,10 +179,9 @@ To prove that it works I'm going to ping cisco.com from the SSH window:
 <br />
 
 For the second WI-FI interface I will use the NETGEAR Nighthawk WiFi 6 USB 3.0 Adapter (A7500) plugged into the Raspberry Pi, which uses the Mediatek MT7921AU chipset fully supported in-kernel since Linux 5.18 (running kernel 6.6), allowing OpenWrt to recognize and activate the adapter for wireless operation.
-<!--
 <br/><br>
 <p align="center">
-<img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+<img src="https://i.imgur.com/Y82Z3j7.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
