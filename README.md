@@ -163,17 +163,18 @@ I check the box to replace the wirless configuration and then I Enter my credent
 <br />
 <br />
 
-Now I can see that my interface is connected to the SSID
+Now we can see that my interface is connected to my home internet. And in the following image we can see that my wireless home router gave it an IP address of 10.10.255.214 with a subnet mask of 255.255.0.0.
 <br/><br>
 <p align="center">
-<img src="https://i.imgur.com/lVtLM6U.png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+<img src="https://i.imgur.com/lVtLM6U.png" height="80%" width="80%" /><img src="https://i.imgur.com/HiG5QzI.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
+
+To prove that it works I'm going to ping cisco.com from the SSH window:
 <br/><br>
 <p align="center">
-<img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
-</p>
+<img src="https://i.imgur.com/eAo8PN6.png" height="80%" width="80%" />
 <br />
 <br />
 <br/><br>
