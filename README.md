@@ -115,7 +115,7 @@ I enter insert mode in vi by pressing the i key, then modify the LAN interface s
 </p>
 <br />
 <br />
-I proceed to edit the firewall configuration file by launching vi on /etc/config/firewall and, within the WAN zone section, change the option input 'reject' directive to option input 'accept' to permit incoming traffic on the WAN interface for better accessibility during the initial setup. I'm using the same combo to save and exit i.e. ESC :wq Enter, after which I'm going to reboot the Pi by writing reboot and hit Enter.
+I proceed to edit the firewall configuration file by launching 'vi on /etc/config/firewall' and, within the WAN zone section, change the option input 'reject' directive to option input 'accept' to permit incoming traffic on the WAN interface for better accessibility during the initial setup. I'm using the same combo to save and exit i.e. ESC :wq Enter, after which I'm going to reboot the Pi by writing reboot and hit Enter.
 <br/><br>
 <p align="center">
 <img src="https://i.imgur.com/SbUVl8I.png" height="50%" width="50%" /><img src="https://i.imgur.com/qvLm7B6.png" height="50%" width="50%" />
@@ -129,14 +129,53 @@ We note that the updated LAN IP address (now 10.155.155.60) and the newly added 
 </p>
 <br />
 <br />
-I verify the updated network configuration on my Windows PC by running the ipconfig command, confirming that DHCP from the Raspberry Pi has assigned it the IP address 10.155.155.170 within the new subnet, then establish a fresh SSH connection to the Pi by running ssh root@10.155.155.60 using the updated gateway address.
+I verify the updated network configuration on my Windows PC by running the 'ipconfig' command, confirming that DHCP from the Raspberry Pi has assigned it the IP address 10.155.155.170 within the new subnet, then establish a fresh SSH connection to the Pi by running ssh root@10.155.155.60 using the updated gateway address.
 <br/><br>
 <p align="center">
 <img src="https://imgur.com/K3f65Zk.png" height="50%" width="50%" /><img src="https://i.imgur.com/TEohuEo.png" height="50%" width="50%" />
 </p>
 <br />
 <br />
-<!--
+
+Next I open the wireless configuration file by running 'vi /etc/config/wireless' (if you're not in /etc/config already) and change the line option disabled '1' to option disabled '0' to enable the WiFi radio on the Raspberry Pi's built-in wireless adapter. Then ESC :wq ENTER. After that I write 'uci commit wireless' and 'wifi' and after this if I check my phone I can see that the Pi is broadcasting OpenWRT.
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/giL1maZ.png" height="50%" width="50%" /><img src="https://i.imgur.com/wPZJ8bw.png" height="50%" width="50%" /><img src="https://i.imgur.com/QVlZtet.png" height="20%" width="20%" />
+</p>
+<br />
+<br />
+
+At this point I'm navigating to the GUI (luci) by opening a browser and typing the IP Address 10.155.155.60 and hit Enter then log in with the same password. 
+I need to mention that all our configs can be set here in this GUI but most of the time I prefer to use the command line.
+Here I will navigate to Network > Wireless and click SCAN. From here I will pick my home wireless network to connect the Raspberry Pi to the internet with it.
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/5JJhtrt.png" height="50%" width="50%" /><img src="https://i.imgur.com/PA1wssk.png" height="50%" width="50%" /><img src="https://imgur.com/BHPq8VB.png" height="50%" width="50%" /><img src="https://imgur.com/biDfXcy.png" height="50%" width="50%" />
+</p>
+<br />
+<br />
+
+I check the box to replace the wirless configuration and then I Enter my credentials and click submit and then save.
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/B7ferwf.png" height="80%" width="80%" /><img src="https://i.imgur.com/gBViPTA.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
+Now I can see that my interface is connected to the SSID
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/lVtLM6U.png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+<br/><br>
+<p align="center">
+<img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+</p>
+<br />
+<br />
 <br/><br>
 <p align="center">
 <img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
@@ -149,7 +188,24 @@ I verify the updated network configuration on my Windows PC by running the ipcon
 </p>
 <br />
 <br />
---!>
+<br/><br>
+<p align="center">
+<img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+<br/><br>
+<p align="center">
+<img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+<br/><br>
+<p align="center">
+<img src=".png" height="80%" width="80%" /><img src=".png" height="80%" width="80%" />
+</p>
+<br />
+<br />
 
 **TO BE CONTINUED**
  <!--
