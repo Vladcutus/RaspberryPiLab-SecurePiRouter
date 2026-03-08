@@ -11,8 +11,8 @@ Project consists in: <br>
 - Installing OpenWRT which is an open source Linux-based router
 - Using PowerShell to SSH into the Pi and configure the network
 - Connect it to the internet
-- Setup the USB Wireless Adapter (coming soon)
-- Setup VPN (coming soon)
+- Setup the USB Wireless Adapter
+- Setup VPN
 <h2>Environments and Technologies Used</h2>
 
 - <b>Raspberry Pi</b> 
@@ -273,7 +273,7 @@ Next, I made sure I have the packages installed by running 'opkg update'   'opkg
 <br />
 <br />
 
-Immediately after I copy and pasted 5 sets of commands from the notepad [Dropbox link](https://www.dropbox.com/scl/fi/vpy2ce3qcfqlaet836dj1/OpenVPN-OpenWRT-setup-commands.txt?rlkey=13yl6jg60xvz13hktokdphqus&st=87pdab4b&dl=0).
+Immediately after I copy and pasted 5 sets of commands from the notepad. [Dropbox link](https://www.dropbox.com/scl/fi/vpy2ce3qcfqlaet836dj1/OpenVPN-OpenWRT-setup-commands.txt?rlkey=13yl6jg60xvz13hktokdphqus&st=87pdab4b&dl=0).
 <br/><br>
 <p align="center">
 <img src="https://i.imgur.com/JDB4o5J.png" height="80%" width="80%" />
@@ -281,16 +281,26 @@ Immediately after I copy and pasted 5 sets of commands from the notepad [Dropbox
 <br />
 <br />
 
+I'm navigating to the GUI in the web browser. To demonstrate that VPN is working I'm going to navigate to VPN > OpenVPN dropdown menu and Im going to stop the client and looking which is the public IP address.
 <br/><br>
 <p align="center">
-<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/Hqt0si2.png" height="80%" width="80%" /><img src="https://i.imgur.com/4jb4qiV.png" height="20%" width="20%" />
 </p>
 <br />
 <br />
-
---!>
-
-**TO BE CONTINUED**
+And then turning the client back on and checking the public IP address again. We can see that VPN worked.
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/yGoCfBx.png" height="80%" width="80%" /><img src="https://i.imgur.com/whV6Lhg.png" height="20%" width="20%" />
+</p>
+<br />
+<br />
+Now I have a Raspberry Pi Wi-Fi router with 2 Wi-FI adapters, with a functional firewall and VPN.
+<br/><br>
+<p align="center">
+<img src="https://i.imgur.com/xIuNl69.png" height="80%" width="80%" />
+<br />
+<br />
 
  <!--
  ```diff
