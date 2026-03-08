@@ -202,17 +202,10 @@ Checking what is going on at the USB side with the command 'lsusb -t' and confir
 <br />
 <br />
 Here I ran into an error when I tried to bring it up and running, namely "SIOCGIFFLAGS: No such device". I checked with 'ifconfig' and it wasn't there. After a short research using AI, I realised that a new interface had to be created manually. So I typed 'iw phy phy1 interface add wlan1 type managed' and I checked with 'ip link show wlan1'.
-Afterwards I typed 'ip link set wlan1 up' to make it alive and after I checked again I could see the word 'UP' in the details.
+<p></p>Afterwards I typed 'ip link set wlan1 up' to make it alive and after I checked again I could see the word 'UP' in the details.</p>
 <br/><br>
 <p align="center">
 <img src="https://i.imgur.com/rTmuvjU.png" height="80%" width="80%" /><img src="https://i.imgur.com/HYZOKeS.png" height="80%" width="80%" />
-</p>
-<br />
-<br />
-And if I checked 'ifconfig' once again, I could see the new interface appearing there
-<br/><br>
-<p align="center">
-<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
@@ -234,17 +227,19 @@ EOF
 </p>
 <br />
 <br />
-
-<br/><br>
+After the rebbot I went to edit the wireless config file using the 'nano' instead of 'vi' this time: 'nano /etc/config/wireless'
+<p>And inside I changed the band from 6g to 5g, htmode to VHT80, disabled to '0', replaced that openwrt ssid with my custom ssid and setup my custom password with psk2 encryption</p>
+<p>To save, type CTRL+X Y ENTER</p>
 <p align="center">
-<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/cXofSnv.png" height="50%" width="50%" /><img src="https://imgur.com/xJlzIvE.png" height="50%" width="50%" />
 </p>
 <br />
 <br />
 
+To demonstrate that it's working and it's broadcasting I'm checking my phone and I cand see my custom ssid. I put my designated password in and then I could see that I got an IP Address of 10.155.155.204 on my particular subnet.
 <br/><br>
 <p align="center">
-<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/cbylC4y.png" height="50%" width="50%" /><img src="https://i.imgur.com/leSl5aA.png" height="50%" width="50%" /><img src="https://i.imgur.com/INo63On.png" height="50%" width="50%" />
 </p>
 <br />
 <br />
