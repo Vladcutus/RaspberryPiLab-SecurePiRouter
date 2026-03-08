@@ -74,34 +74,34 @@ I'm switching from automatic to manual and I'm typing the IP address I previousl
 </p>
 <br />
 <br />
-Now I'm ready to start configure the router, so I open PowerShell (CMD will work just as fine) on my PC and establish an SSH connection to the Raspberry Pi by running the command ssh root@192.168.1.1, accepting the host key fingerprint if prompted for the first time.
+Now I'm ready to start configure the router, so I open PowerShell (CMD will work just as fine) on my PC and establish an SSH connection to the Raspberry Pi by running the command 'ssh root@192.168.1.1', accepting the host key fingerprint if prompted for the first time.
  <br/><br>
 <p align="center">
 <img src="https://i.imgur.com/1IN6lQf.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
-I follow up by securely set a new root password for the OpenWrt system by running the passwd command, entering a strong password twice as prompted, which replaces the default insecure credentials and enhances initial access protection.
+I follow up by securely set a new root password for the OpenWrt system by running the 'passwd' command, entering a strong password twice as prompted, which replaces the default insecure credentials and enhances initial access protection.
 <br/><br>
 <p align="center">
 <img src="https://i.imgur.com/SnRbPUe.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
-I navigate to the configuration directory by running cd /etc/config in the SSH session, then use the ls command to list and display the contents, revealing the standard OpenWrt configuration files such as network, dhcp, firewall, wireless, and system that control the device's core settings and services.
+I navigate to the configuration directory by running 'cd /etc/config' in the SSH session, then use the 'ls' command to list and display the contents, revealing the standard OpenWrt configuration files such as network, dhcp, firewall, wireless, and system that control the device's core settings and services.
 <br>
 <p align="center">
 <img src="https://i.imgur.com/Vb8esvE.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
-I'm going to back up some files using the cp command followed by the file I want to backup and then the name of the file that I want my backup to be named after. Checking my backup work with ls thereafter.<br/>
+I'm going to back up some files using the 'cp' command followed by the file I want to backup and then the name of the file that I want my backup to be named after. Checking my backup work with 'ls' thereafter.<br/>
 <p align="center"> 
 <img src="https://i.imgur.com/lA5BmTr.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
-I proceed to edit the network configuration file by navigating to /etc/config and launching vi on the network file with the command vi network, preparing to modify the LAN interface settings for customized IP addressing and connectivity.
+I proceed to edit the network configuration file by navigating to /etc/config and launching 'vi' on the network file with the command 'vi network', preparing to modify the LAN interface settings for customized IP addressing and connectivity.
 <br/> <br>
 <p align="center">
 <img src="https://i.imgur.com/l8WHzar.png" height="80%" width="80%" />
