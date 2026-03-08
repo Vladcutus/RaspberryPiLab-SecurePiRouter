@@ -231,22 +231,21 @@ After the rebbot I went to edit the wireless config file using the 'nano' instea
 <p>And inside I changed the band from 6g to 5g, htmode to VHT80, disabled to '0', replaced that openwrt ssid with my custom ssid and setup my custom password with psk2 encryption</p>
 <p>To save, type CTRL+X Y ENTER</p>
 <p align="center">
-<img src="https://i.imgur.com/cXofSnv.png" height="50%" width="50%" /><img src="https://imgur.com/xJlzIvE.png" height="50%" width="50%" />
+<img src="https://i.imgur.com/cXofSnv.png" height="50%" width="50%" /><img src="https://i.imgur.com/xJlzIvE.png" height="50%" width="50%" />
 </p>
 <br />
 <br />
+<p>Then I have to write 'uci commit wireless' and 'wifi up radio1' to bring it up and running.</p>
+<img src="https://i.imgur.com/nASWM1A.png" height="80%" width="80%" />
+
+
+
+
 
 To demonstrate that it's working and it's broadcasting I'm checking my phone and I cand see my custom ssid. I put my designated password in and then I could see that I got an IP Address of 10.155.155.204 on my particular subnet.
 <br/><br>
 <p align="center">
-<img src="https://i.imgur.com/cbylC4y.png" height="50%" width="50%" /><img src="https://i.imgur.com/leSl5aA.png" height="50%" width="50%" /><img src="https://i.imgur.com/INo63On.png" height="50%" width="50%" />
-</p>
-<br />
-<br />
-
-<br/><br>
-<p align="center">
-<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/uMgW4Xa.png" height="20%" width="20%" /><img src="https://i.imgur.com/TkG2Vui.png" height="33%" width="33%" /><img src="https://i.imgur.com/INo63On.png" height="33%" width="33%" />
 </p>
 <br />
 <br />
