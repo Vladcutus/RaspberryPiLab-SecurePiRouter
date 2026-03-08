@@ -250,30 +250,33 @@ To demonstrate that it's working and it's broadcasting I'm checking my phone and
 <br />
 <br />
 
-<br/><br>
+The FINAL STEP in this project is to set up VPN, so I navigate to vpnbook.com, select a United Kingdom OpenVPN server, and download the corresponding .ovpn configuration file to enable full-tunnel routing of all traffic through the VPN.
 <p align="center">
-<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/2TaQ3EE.png" height="50%" width="50%" /><img src="https://i.imgur.com/sn0XTMX.png" height="50%" width="50%" />
 </p>
 <br />
 <br />
 
+I open Command Prompt, navigate to my Downloads folder, and execute the command 'scp -O vpnbook-uk205-udp53.ovpn root@10.155.155.60:/etc/openvpn/client.conf' to securely copy the downloaded OpenVPN configuration file to the Raspberry Pi, using the -O flag to force the legacy SCP protocol after encountering an SFTP-related error due to OpenWrt’s minimal SSH server. I used AI help to find the solution, tested it and it worked.
 <br/><br>
 <p align="center">
-<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/C1E11a1.png" height="80%" width="80%" /><img src="https://i.imgur.com/CwQCQ8T.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
 
-<br/><br>
+Next, I made sure I have the packages installed by running 'opkg update'   'opkg install luci-app-openvpn' and '/etc/init.d/rpcd restat'.
+<p>Then I configured 4 parameters for openvpn, specifically DIR, ID, USER, PASS. Vpnbook provided me with the username and password that I put in here</p>
 <p align="center">
-<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/2RWqTA1.png" height="50%" width="50%" /><img src="https://imgur.com/iPZXk0y.png" height="50%" width="50%" />
 </p>
 <br />
 <br />
 
+Immediately after I copy and pasted 5 sets of commands from the notepad [Dropbox link](https://www.dropbox.com/scl/fi/vpy2ce3qcfqlaet836dj1/OpenVPN-OpenWRT-setup-commands.txt?rlkey=13yl6jg60xvz13hktokdphqus&st=87pdab4b&dl=0).
 <br/><br>
 <p align="center">
-<img src="https://i.imgur.com/l5QJCaM.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/JDB4o5J.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
