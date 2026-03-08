@@ -284,7 +284,7 @@ Immediately after I copy and pasted 5 sets of commands from the notepad. [Dropbo
 I'm navigating to the GUI in the web browser. To demonstrate that VPN is working I'm going to navigate to VPN > OpenVPN dropdown menu and Im going to stop the client and looking which is the public IP address.
 <br/><br>
 <p align="center">
-<img src="https://i.imgur.com/Hqt0si2.png" height="80%" width="80%" /><img src="https://i.imgur.com/4jb4qiV.png" height="20%" width="20%" />
+<img src="https://i.imgur.com/Hqt0si2.png" height="80%" width="80%" /><img src="https://i.imgur.com/ZXgbvvC.png" height="20%" width="20%" />
 </p>
 <br />
 <br />
@@ -298,7 +298,7 @@ And then turning the client back on and checking the public IP address again. We
 Now I have a Raspberry Pi Wi-Fi router with 2 Wi-FI adapters, with a functional firewall and VPN.
 <br/><br>
 <p align="center">
-<img src="https://i.imgur.com/xIuNl69.png" height="80%" width="80%" />
+<img src="https://i.imgur.com/TuTG8e6.png" height="80%" width="80%" />
 <br />
 <br />
 
