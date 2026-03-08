@@ -295,7 +295,7 @@ And then turning the client back on and checking the public IP address again. We
 </p>
 <br />
 <br />
-Now I have a Raspberry Pi Wi-Fi router with 2 Wi-FI adapters, with a functional firewall and VPN.
+Now I have a Raspberry Pi Wi-Fi router with 2 Wi-FI adapters -a client and an access point- that filters traffic through VPN.
 <br/><br>
 <p align="center">
 <img src="https://i.imgur.com/TuTG8e6.png" height="80%" width="80%" />
